@@ -1,0 +1,50 @@
+Casos de testes para o site público de ecommerce https://www.saucedemo.com/cart.html
+
+
+Cenário 1: Login com usuário existente
+Dado que estou na página inicial do site Saucedemo
+ Quando informo o nome de usuário e senha válidos
+ E clico em “Login”
+ Então a opção “Logout” deve estar disponível
+
+Cenário 2: Adicionar produto ao carrinho
+Dado que estou logado no site Saucedemo
+ Quando clico em “Add to cart” em um produto
+ Então devo a opção de 'Remove' deve ser exibida para aquele produto
+
+Cenário 3: Visualizar produtos no carrinho
+Dado que tenho um ou mais produtos adicionados ao carrinho
+ Quando clico no símbolo de carrinho
+ Então devo ver o produto adicionado no carrinho
+
+Cenário 4: Remover item do carrinho
+Dado que tenho produtos adicionados ao carrinho
+ Quando acesso a página do carrinho
+ E clico para remover um item
+ Então o item removido deve desaparecer da lista
+
+Cenário 5: Tentar finalizar compra sem preencher todos os campos
+Dado que estou na página de checkout com produtos no carrinho
+ Quando clico em “Continue”
+ E deixo de preencher todos os campos obrigatórios
+ E clico em “Continue”
+ Então devo ver uma mensagem de erro solicitando o preenchimento dos campos obrigatórios
+
+Cenário 6: Tentar finalizar compra sem preencher o campo de sobrenome
+Dado que estou na página de checkout com produtos no carrinho
+ Quando clico em “Continue”
+ E deixo de preencher todos o campo 'Last Name'
+ E clico em “Continue”
+ Então devo ver uma mensagem de erro solicitando o preenchimento do campo 'Last Name'
+
+Cenário 7: Tentar finalizar compra sem preencher o campo de código postal
+Dado que estou na página de checkout com produtos no carrinho
+ Quando clico em “Continue”
+ E deixo de preencher todos o campo 'Zip/Postal Code'
+ E clico em “Continue”
+ Então devo ver uma mensagem de erro solicitando o preenchimento do campo 'Zip/Postal Code'
+
+Cenário 8: Clicar em 'Cancel' na página de checkout
+Dado que estou na página de checkout com produtos no carrinho
+ Quando clico em 'Cancel' na página de checkout
+ Então devo voltar para a página do carrinho
